@@ -1,2 +1,5 @@
-package Task7.components;public class SumClass {
+package Task7.components;
+
+public abstract class SumClass {
+    public abstract Object sumElements(Object[] elements);
 }

@@ -30,6 +30,6 @@ public class Task6 {
     }
 
     public static boolean inc(boolean f) {
-        return !f;
+        return true;
     }
 }

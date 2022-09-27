@@ -9,11 +9,12 @@ public class B {
 
     @Override
     public int hashCode() {
-        return this.b;
+        return 1;
     }
 
     @Override
     public boolean equals(Object other) {
-        return false;
+        B otherB = (B)(other);
+        return b == otherB.b;
     }
 }

@@ -6,9 +6,9 @@ import java.util.HashMap;
 
 public class Task1 {
     public static void main(String[] args) {
-        A firstA = new A(5);
+        A firstA = new A(6);
         A secondA = new A(6);
-        B firstB = new B(2);
+        B firstB = new B(1);
         B secondB = new B(2);
         System.out.println("firstA.equals(secondA): " + firstA.equals(secondA));
         System.out.println("firstA.hashCode() == secondA.hashCode(): " + (firstA.hashCode() == secondA.hashCode()));

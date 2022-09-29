@@ -4,7 +4,6 @@ import Task12.resources.Name;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 
 public class Task12 {
     public static void main(String[] args) {

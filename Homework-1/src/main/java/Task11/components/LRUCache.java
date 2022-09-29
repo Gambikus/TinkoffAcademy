@@ -16,15 +16,14 @@ public class LRUCache {
     }
 
     public JSONObject get(Integer id) {
+        if (lastFiveElements.size() == 5) {
+            cache.remove(lastFiveElements.poll());
+        }
         lastFiveElements.addLast(id);
         if (!cache.containsKey(id)) {
             JSONObject newItem = new JSONObject();
-            newItem.put("data", Data.values()[(int) (Math.random() * 4)]);
+            newItem.put("data", Data.values()[(int) (Math.random() * Data.values().length)]);
             cache.put(id, newItem);
-        }
-        if (lastFiveElements.size() > 5) {
-            lastFiveElements.poll();
-            System.out.println(lastFiveElements);
         }
         return cache.get(id);
     }

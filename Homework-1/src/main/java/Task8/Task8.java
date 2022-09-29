@@ -25,7 +25,7 @@ public class Task8 {
     }
 
     public static int[] firstAlgorithm(int[] arr) throws ArrayModificationException {
-        int max = -100;
+        int max = Integer.MIN_VALUE;
         for (int el: arr) {
             max = Math.max(max, el);
         }
@@ -45,7 +45,7 @@ public class Task8 {
     }
 
     public static int[] secondAlgorithm(int[] arr) {
-        int max = -100;
+        int max = Integer.MIN_VALUE;
         for (int el: arr) {
             max = Math.max(max, el);
         }

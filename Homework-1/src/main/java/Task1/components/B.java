@@ -1,5 +1,7 @@
 package Task1.components;
 
+import java.util.Objects;
+
 public class B {
     private final int b;
 
@@ -14,7 +16,9 @@ public class B {
 
     @Override
     public boolean equals(Object other) {
+        if (this == other) return true;
+        if (other == null || getClass() != other.getClass()) return false;
         B otherB = (B)(other);
-        return b == otherB.b;
+        return Objects.equals(b, otherB.b);
     }
 }

@@ -8,6 +8,8 @@
 ### Проверка ДЗ
 
 - Чтобы запустить приложение, нужно запустить метод main класса [Homework4Application](./homework-4/src/main/java/com/example/homework4/Homework4Application.java)
+или прописать в командной строке 
+```.\mvnw spring-boot:run```
 - Чтобы проверить правильность выполнения задания нужно сделать GET-запрос на адрес **localhost:8080/actuator/info**,
 он вернет JSON-файл:
 ```
@@ -21,3 +23,4 @@
     }
 }
 ```
+Скриншот ответа приложение [тут](./resources/response.png)

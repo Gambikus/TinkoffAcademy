@@ -15,15 +15,21 @@ public class LRUCache {
         lastFiveElements = new LinkedList<>();
     }
 
+    public void add(Integer id) {
+        JSONObject newItem = new JSONObject();
+        newItem.put("data", Data.values()[(int) (Math.random() * Data.values().length)]);
+        cache.put(id, newItem);
+    }
     public JSONObject get(Integer id) {
         if (lastFiveElements.size() == 5) {
-            cache.remove(lastFiveElements.poll());
+            Integer deletedId = lastFiveElements.poll();
+            if (!lastFiveElements.contains(deletedId) && !id.equals(deletedId)) {
+                cache.remove(deletedId);
+            }
         }
         lastFiveElements.addLast(id);
         if (!cache.containsKey(id)) {
-            JSONObject newItem = new JSONObject();
-            newItem.put("data", Data.values()[(int) (Math.random() * Data.values().length)]);
-            cache.put(id, newItem);
+            add(id);
         }
         return cache.get(id);
     }
